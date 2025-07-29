@@ -10,7 +10,7 @@ use MoonShine\UI\Fields\Field;
 
 class Leaflet extends Field
 {
-    use HasLeaflet, HasConfig;
+    use HasConfig, HasLeaflet;
 
     protected string $type = 'hidden';
 
@@ -21,7 +21,6 @@ class Leaflet extends Field
     protected array $propertyAttributes = [
         'type',
     ];
-
 
     protected function reformatFilledValue(mixed $data): mixed
     {

@@ -7,15 +7,21 @@ use InvalidArgumentException;
 trait HasConfig
 {
     protected float $initLatitude = 0;
+
     protected float $initLongitude = 0;
+
     protected int $zoom = 14;
+
     protected int $minZoom = 5;
+
     protected int $maxZoom = 18;
+
     protected bool $draggable = true;
 
     public function isDraggable(bool $draggable): static
     {
         $this->draggable = $draggable;
+
         return $this;
     }
 
@@ -34,6 +40,7 @@ trait HasConfig
         }
 
         $this->zoom = $zoom;
+
         return $this;
     }
 
@@ -44,6 +51,7 @@ trait HasConfig
         }
 
         $this->minZoom = $minZoom;
+
         return $this;
     }
 
@@ -54,6 +62,7 @@ trait HasConfig
         }
 
         $this->maxZoom = $maxZoom;
+
         return $this;
     }
 
