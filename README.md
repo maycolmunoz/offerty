@@ -39,6 +39,7 @@ npm run dev
 ```bash
 php artisan launch:install
 ```
+
 The installer will automatically:
 
 - Generate the application key
@@ -48,4 +49,8 @@ The installer will automatically:
 - Create the storage symbolic link
 - Seed the database with test data
 
+### 4. Copy the example images:
 
+```bash
+cp -r app-modules/core/resources/images/*  storage/app/public
+```
