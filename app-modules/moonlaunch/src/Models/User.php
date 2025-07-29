@@ -10,5 +10,4 @@ class User extends ModelsUser
     use MoonshineRBACHasRoles;
 
     const SUPER_ADMIN_ROLE_ID = 1;
-
 }
