@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4edd7daf0bfc7ff5978c1c92be735198",
+    "content-hash": "1946a2500bc639579273d93e2df6a7c9",
     "packages": [
         {
             "name": "brick/math",
@@ -1147,6 +1147,38 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
+        },
+        {
+            "name": "estivenm0/core",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/core",
+                "reference": "2f1cc37a5850c6b855c191adb07ec0ac0c26e838"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Estivenm0\\Core\\Providers\\CoreServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Estivenm0\\Core\\": "src/",
+                    "Estivenm0\\Core\\Tests\\": "tests/",
+                    "Estivenm0\\Core\\Database\\Factories\\": "database/factories/",
+                    "Estivenm0\\Core\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "estivenm0/moonlaunch",
