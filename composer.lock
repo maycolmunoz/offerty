@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb30092c0a8b7721f10e3a39011b50a6",
+    "content-hash": "968a03e2d60c13e1ada81bfdbe270c7a",
     "packages": [
         {
             "name": "brick/math",
@@ -1202,6 +1202,38 @@
                     "Estivenm0\\Core\\Tests\\": "tests/",
                     "Estivenm0\\Core\\Database\\Factories\\": "database/factories/",
                     "Estivenm0\\Core\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "estivenm0/moon-leaflet",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/moon-leaflet",
+                "reference": "a05ff89d399e1883e24d16c89ae07c0eb64612a8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Estivenm0\\MoonLeaflet\\Providers\\MoonLeafletServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Estivenm0\\MoonLeaflet\\": "src/",
+                    "Estivenm0\\MoonLeaflet\\Tests\\": "tests/",
+                    "Estivenm0\\MoonLeaflet\\Database\\Factories\\": "database/factories/",
+                    "Estivenm0\\MoonLeaflet\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [

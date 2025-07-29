@@ -1,0 +1,24 @@
+{
+	"name": "estivenm0/moon-leaflet",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Estivenm0\\MoonLeaflet\\": "src/",
+			"Estivenm0\\MoonLeaflet\\Tests\\": "tests/",
+			"Estivenm0\\MoonLeaflet\\Database\\Factories\\": "database/factories/",
+			"Estivenm0\\MoonLeaflet\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Estivenm0\\MoonLeaflet\\Providers\\MoonLeafletServiceProvider"
+			]
+		}
+	}
+}
