@@ -11,6 +11,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "estivenm0/admin": "*",
         "estivenm0/core": "*",
         "estivenm0/moonlaunch": "*",
         "inertiajs/inertia-laravel": "^2.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77327c9247c085364578ad007fa91355",
+    "content-hash": "fb30092c0a8b7721f10e3a39011b50a6",
     "packages": [
         {
             "name": "brick/math",
@@ -1147,6 +1147,38 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
+        },
+        {
+            "name": "estivenm0/admin",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/admin",
+                "reference": "d32f0eeb454be52103aaed6325e8dc60f695d22c"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Estivenm0\\Admin\\Providers\\AdminServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Estivenm0\\Admin\\": "src/",
+                    "Estivenm0\\Admin\\Tests\\": "tests/",
+                    "Estivenm0\\Admin\\Database\\Factories\\": "database/factories/",
+                    "Estivenm0\\Admin\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "estivenm0/core",
