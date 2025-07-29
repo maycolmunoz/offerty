@@ -2,6 +2,9 @@
 
 namespace Estivenm0\Admin\Services;
 
+use Estivenm0\Admin\MoonShine\Own\OwnBusinessResource;
+use Estivenm0\Admin\MoonShine\Own\OwnPromotionResource;
+use Estivenm0\Admin\MoonShine\Own\OwnRatingResource;
 use Estivenm0\Admin\MoonShine\Resources\CategoryResource;
 use Estivenm0\Admin\MoonShine\Resources\TypeResource;
 use Estivenm0\Admin\MoonShine\Super\SuperBusinessResource;
@@ -22,6 +25,10 @@ class AdminModule
             SuperBusinessResource::class,
             SuperPromotionResource::class,
             SuperRatingResource::class,
+
+            OwnBusinessResource::class,
+            OwnPromotionResource::class,
+            OwnRatingResource::class,
         ];
     }
 
@@ -38,6 +45,9 @@ class AdminModule
                     MenuItem::make('Businesses', SuperBusinessResource::class),
                 ], 's.viewfinder-circle')
             ),
+
+            MenuItem::make('My Businesses', OwnBusinessResource::class)
+                ->canSee(fn () => moonshineRequest()->user()->hasRole('user')),
         ];
     }
 }
