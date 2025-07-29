@@ -47,6 +47,22 @@ return [
             'report' => false,
         ],
 
+        'promotions' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/promotions'),
+            'url' => env('APP_URL').'/storage/promotions',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'businesses' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/businesses'),
+            'url' => env('APP_URL').'/storage/businesses',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
