@@ -20,6 +20,7 @@ use MoonShine\Support\Attributes\Icon;
 use MoonShine\Support\ListOf;
 use MoonShine\UI\Components\Badge;
 use MoonShine\UI\Components\Layout\Box;
+use MoonShine\UI\Components\Metrics\Wrapped\ValueMetric;
 use MoonShine\UI\Fields\Email;
 use MoonShine\UI\Fields\Enum;
 use MoonShine\UI\Fields\ID;
@@ -151,6 +152,23 @@ class SuperBusinessResource extends ModelResource
 
             BelongsToMany::make('Types', resource: TypeResource::class)->selectMode(),
 
+        ];
+    }
+
+    /**
+     * @return list<Metric>
+     */
+    protected function metrics(): array
+    {
+        return [
+            ValueMetric::make('Pending Businesses')
+                ->value(fn () => Business::whereStatus(StatusEnum::APPROVED->value)->count())
+                ->icon('s.hand-raised')
+                ->columnSpan(6),
+            ValueMetric::make('Businesses')
+                ->value(fn () => Business::count())
+                ->icon('s.building-storefront')
+                ->columnSpan(6),
         ];
     }
 }
