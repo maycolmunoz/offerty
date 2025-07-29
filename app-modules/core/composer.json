@@ -1,0 +1,24 @@
+{
+	"name": "estivenm0/core",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Estivenm0\\Core\\": "src/",
+			"Estivenm0\\Core\\Tests\\": "tests/",
+			"Estivenm0\\Core\\Database\\Factories\\": "database/factories/",
+			"Estivenm0\\Core\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Estivenm0\\Core\\Providers\\CoreServiceProvider"
+			]
+		}
+	}
+}
