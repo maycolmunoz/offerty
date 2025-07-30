@@ -1,0 +1,90 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Estivenm0\Admin\MoonShine\Resources;
+
+use Estivenm0\Core\Models\Type;
+use Estivenm0\Moonlaunch\Traits\Properties;
+use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\Contracts\UI\FieldContract;
+use MoonShine\Laravel\Enums\Action;
+use MoonShine\Laravel\Resources\ModelResource;
+use MoonShine\Support\Attributes\Icon;
+use MoonShine\Support\ListOf;
+use MoonShine\UI\Components\Layout\Box;
+use MoonShine\UI\Fields\ID;
+use MoonShine\UI\Fields\Text;
+use Sweet1s\MoonshineRBAC\Traits\WithRolePermissions;
+
+#[Icon('s.clipboard')]
+/**
+ * @extends ModelResource<Type>
+ */
+class TypeResource extends ModelResource
+{
+    use Properties, WithRolePermissions;
+
+    protected string $model = Type::class;
+
+    public function __construct()
+    {
+        $this->title('Businesses Types')
+            ->column('name')
+            ->allInModal();
+    }
+
+    protected function activeActions(): ListOf
+    {
+        return parent::activeActions()
+            ->only(Action::UPDATE, Action::CREATE);
+    }
+
+    public function search(): array
+    {
+        return ['id', 'name'];
+    }
+
+    private function fields(): array
+    {
+        return [
+            ID::make()->sortable(),
+            Text::make('Name')->required(),
+        ];
+    }
+
+    /**
+     * @return list<FieldContract>
+     */
+    protected function indexFields(): iterable
+    {
+        return [
+            ...$this->fields(),
+        ];
+    }
+
+    /**
+     * @return list<ComponentContract|FieldContract>
+     */
+    protected function formFields(): iterable
+    {
+        return [
+            Box::make($this->fields()),
+        ];
+    }
+
+    /**
+     * @param  Type  $item
+     * @return array<string, string[]|string>
+     *
+     * @see https://laravel.com/docs/validation#available-validation-rules
+     */
+    protected function rules(mixed $item): array
+    {
+        return [
+            'name' => moonshineRequest()->isMethod('POST') ?
+                'required|string|max:50|unique:types,name' :
+                'required|string|max:50|unique:types,name,'.$item->id,
+        ];
+    }
+}

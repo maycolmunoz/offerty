@@ -28,10 +28,9 @@ class LaunchInstall extends Command
         $this->runStep('🔧 Generating application key...', 'key:generate');
         $this->runStep('📦 Running migrations...', 'migrate');
         $this->runStep('🔐 Generating permissions...', 'launch:permissions');
+        $this->runStep('🌱 Running database seeders...', 'db:seed');
         $this->runStep('👤 Creating Super Admin user...', 'moonshine-rbac:user');
         $this->runStep('🔗 Linking storage...', 'storage:link');
-        $this->runStep('🌱 Running database seeders...', 'db:seed');
-
         $this->info('✅ Moonlaunch installed successfully.');
     }
 

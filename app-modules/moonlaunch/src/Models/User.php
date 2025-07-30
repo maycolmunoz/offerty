@@ -12,8 +12,17 @@ class User extends ModelsUser
 
     const SUPER_ADMIN_ROLE_ID = 1;
 
+    const ROLE_USER = 'user';
+
     protected static function newFactory(): UserFactory
     {
         return UserFactory::new();
+    }
+
+    protected static function booted()
+    {
+        static::created(function ($user) {
+            $user->assignRole(self::ROLE_USER);
+        });
     }
 }
