@@ -3,7 +3,7 @@ import UserInfo from '@/components/UserInfo.vue';
 import { DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 import type { User } from '@/types';
 import { Link, router } from '@inertiajs/vue3';
-import { LogOut, Settings } from 'lucide-vue-next';
+import { Columns2, LogOut, Settings } from 'lucide-vue-next';
 
 interface Props {
     user: User;
@@ -22,6 +22,15 @@ defineProps<Props>();
             <UserInfo :user="user" :show-email="true" />
         </div>
     </DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuGroup>
+        <DropdownMenuItem :as-child="true">
+            <a class="block w-full" :href="route('moonshine.index')" target="_blank">
+                <Columns2 />
+                Admin Panel
+            </a>
+        </DropdownMenuItem>
+    </DropdownMenuGroup>
     <DropdownMenuSeparator />
     <DropdownMenuGroup>
         <DropdownMenuItem :as-child="true">
