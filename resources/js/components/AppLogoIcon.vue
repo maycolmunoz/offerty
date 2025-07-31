@@ -13,7 +13,9 @@ defineProps<Props>();
 </script>
 
 <template>
-       <svg :class="className" v-bind="$attrs"
+    <svg
+        :class="className"
+        v-bind="$attrs"
         xmlns="http://www.w3.org/2000/svg"
         width="600"
         height="600"

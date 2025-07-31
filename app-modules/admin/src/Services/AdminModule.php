@@ -10,7 +10,6 @@ use Estivenm0\Admin\MoonShine\Resources\TypeResource;
 use Estivenm0\Admin\MoonShine\Super\SuperBusinessResource;
 use Estivenm0\Admin\MoonShine\Super\SuperPromotionResource;
 use Estivenm0\Admin\MoonShine\Super\SuperRatingResource;
-use Estivenm0\Moonlaunch\Models\User;
 use MoonShine\MenuManager\MenuGroup;
 use MoonShine\MenuManager\MenuItem;
 use Sweet1s\MoonshineRBAC\Components\MenuRBAC;
@@ -44,11 +43,10 @@ class AdminModule
 
                 MenuGroup::make('Businesses Control', [
                     MenuItem::make('Businesses', SuperBusinessResource::class),
-                ], 's.viewfinder-circle')
-            ),
+                ], 's.viewfinder-circle'),
 
-            MenuItem::make('My Businesses', OwnBusinessResource::class)
-                ->canSee(fn () => moonshineRequest()->user()->hasRole(User::ROLE_USER)),
+                MenuItem::make('My Businesses', OwnBusinessResource::class)
+            ),
         ];
     }
 }

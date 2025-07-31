@@ -57,7 +57,7 @@ return [
 
     // Authentication and profile
     'auth' => [
-        'enabled' => true,
+        'enabled' => false,
         'guard' => 'web',
         'model' => User::class,
         'middleware' => 'auth',
