@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import { BusinessPromotion } from '@/types';
 import { Head, Link } from '@inertiajs/vue3';
+
+defineProps<{
+    businesses: BusinessPromotion[];
+}>();
 </script>
 
 <template>

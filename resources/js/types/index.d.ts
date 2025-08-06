@@ -35,4 +35,22 @@ export interface User {
     updated_at: string;
 }
 
+export interface Promotion {
+    title: string;
+    image: string | null;
+    description: string | null;
+    category: string | null;
+    start_date: string;
+    end_date: string;
+}
+
+export interface BusinessPromotion {
+    id: number;
+    name: string;
+    address: string;
+    longitude: number;
+    latitude: number;
+    promotion: Promotion;
+}
+
 export type BreadcrumbItemType = BreadcrumbItem;
