@@ -22,9 +22,9 @@ class MapResource extends JsonResource
             'latitude' => $this->latitude,
             'promotion' => [
                 'title' => $this->promotion->title,
-                'image' => $this->promotion->image,
+                'image' => $this->promotion->getImageUrl(),
                 'description' => $this->promotion->description,
-                'category' => $this->promotion->category,
+                'category' => $this->promotion->category->name,
                 'start_date' => $this->promotion->start_date,
                 'end_date' => $this->promotion->end_date,
             ],

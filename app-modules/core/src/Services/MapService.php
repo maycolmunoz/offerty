@@ -24,7 +24,7 @@ class MapService
         $category = $rq->query('category', 0);
 
         $businesses = Business::with('promotion')
-            ->whereStatus(StatusEnum::APPROVED->value)
+            // ->whereStatus(StatusEnum::APPROVED->value)
             ->whereHas('promotion', function ($q) use ($category) {
                 if ($category != 0) {
                     $q->whereCategoryId($category);

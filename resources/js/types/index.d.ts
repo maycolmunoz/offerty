@@ -37,7 +37,7 @@ export interface User {
 
 export interface Promotion {
     title: string;
-    image: string | null;
+    image: string;
     description: string | null;
     category: string | null;
     start_date: string;

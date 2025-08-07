@@ -1,12 +1,4 @@
-interface Promotion {
-    title: string;
-}
-
-interface Business {
-    latitude: number;
-    longitude: number;
-    promotion: Promotion;
-}
+import { BusinessPromotion } from '@/types';
 
 type Coordinates = { lat: number; lng: number };
 type OnDragEndCallback = (coords: Coordinates) => void;
@@ -21,7 +13,7 @@ export function useMap() {
             zoomAnimation: true,
             minZoom: 6,
             maxZoom: 18,
-        }).setView([lat, lon], 14);
+        }).setView([lat, lon], 11);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors',
@@ -41,7 +33,7 @@ export function useMap() {
             });
     };
 
-    const addMarkersWithPromotions = (businesses: Business[]) => {
+    const addMarkersWithPromotions = (businesses: BusinessPromotion[]) => {
         if (!markers) return;
 
         const myIcon = L.icon({
@@ -49,13 +41,13 @@ export function useMap() {
             iconSize: [25, 25],
         });
 
-        businesses.forEach((business) => {
-            L.marker([business.latitude, business.longitude], {
-                title: business.promotion.title,
+        businesses.forEach((b) => {
+            L.marker([b.latitude, b.longitude], {
+                title: b.promotion.title,
                 icon: myIcon,
             })
                 .addTo(markers)
-                .bindPopup(business.promotion.title);
+                .bindPopup(b.promotion.title);
         });
     };
 
