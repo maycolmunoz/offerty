@@ -3,6 +3,7 @@ import { useMap } from '@/composables/useMap';
 import { BusinessPromotion } from '@/types';
 import { router } from '@inertiajs/vue3';
 import { onMounted, ref } from 'vue';
+import { toast } from 'vue-sonner';
 
 const props = defineProps<{
     businesses: BusinessPromotion[];
@@ -30,6 +31,9 @@ onMounted(() => {
                 old_businesses.value.push(...newBusinesses);
 
                 addMarkersWithPromotions(newBusinesses);
+
+                const count = newBusinesses.length;
+                toast(`Found ${count} promotion${count !== 1 ? 's' : ''} business${count !== 1 ? 'es' : ''}`);
             },
         });
     });
