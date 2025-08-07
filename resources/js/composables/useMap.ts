@@ -45,9 +45,18 @@ export function useMap() {
             L.marker([b.latitude, b.longitude], {
                 title: b.promotion.title,
                 icon: myIcon,
-            })
-                .addTo(markers)
-                .bindPopup(b.promotion.title);
+            }).addTo(markers).bindPopup(`
+            <div class="max-w-[250px] text-sm text-[#1b1b18]">
+                <img 
+                src="${b.promotion.image}" 
+                alt="Imagen de promoción" 
+                class="w-full h-32 object-cover rounded-md mb-2"
+                />
+                <span class="inline-block rounded-full bg-[#e0e0e0] px-3 py-0.5 text-xs font-medium text-[#1b1b18]">${b.promotion.category}</span>
+                <h3 class="font-semibold text-base">${b.promotion.title}</h3>
+                <p class="text-xs text-gray-700">${b.promotion.description}</p>
+            </div>
+            `);
         });
     };
 

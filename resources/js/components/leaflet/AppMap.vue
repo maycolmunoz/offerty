@@ -2,11 +2,13 @@
 import { useMap } from '@/composables/useMap';
 import { BusinessPromotion } from '@/types';
 import { router } from '@inertiajs/vue3';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const props = defineProps<{
     businesses: BusinessPromotion[];
 }>();
+
+const old_businesses = ref<BusinessPromotion[]>(props.businesses);
 
 const lat = 40.758;
 const lon = -73.9855;
@@ -22,14 +24,20 @@ onMounted(() => {
         router.reload({
             only: ['businesses'],
             data: { lat, lon: lng },
-            onSuccess: () => addMarkersWithPromotions(props.businesses),
+            onSuccess: () => {
+                const newBusinesses = props.businesses.filter((item) => !old_businesses.value.some((b) => b.id === item.id));
+
+                old_businesses.value.push(...newBusinesses);
+
+                addMarkersWithPromotions(newBusinesses);
+            },
         });
     });
 });
 </script>
 
 <template>
-    <section class="m-auto flex flex-col items-center p-6 text-[#1b1b18] lg:justify-center">
-        <div class="z-0 h-[60vh] w-[80vw] rounded-2xl p-6 text-gray-900 md:w-[50vw]" id="map"></div>
+    <section class="m-auto flex flex-col items-center text-[#1b1b18] lg:justify-center">
+        <div class="z-0 h-[80vh] w-[90vw] rounded-2xl text-gray-900 md:h-[80vh] md:w-[50vw]" id="map"></div>
     </section>
 </template>
