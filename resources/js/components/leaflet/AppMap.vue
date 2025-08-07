@@ -30,6 +30,6 @@ onMounted(() => {
 
 <template>
     <section class="m-auto flex flex-col items-center p-6 text-[#1b1b18] lg:justify-center">
-        <div class="z-0 h-96 w-[80vw] rounded-2xl p-6 text-gray-900 md:w-[50vw]" id="map"></div>
+        <div class="z-0 h-[60vh] w-[80vw] rounded-2xl p-6 text-gray-900 md:w-[50vw]" id="map"></div>
     </section>
 </template>
