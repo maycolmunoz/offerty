@@ -17,7 +17,7 @@ MoonLeaflet adds a map field to your forms, letting users pick their location us
 ## Installation
 
 ```shell
-composer require muxzz/moon-leaflet
+composer require muxoz/moon-leaflet
 ```
 
 ## Usage
