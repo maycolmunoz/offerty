@@ -1,10 +1,10 @@
 <?php
 
-namespace Estivenm0\Core\Services;
+namespace Modules\Core\Services;
 
-use Estivenm0\Core\Enums\StatusEnum;
-use Estivenm0\Core\Http\Resources\MapResource;
-use Estivenm0\Core\Models\Business;
+use Modules\Core\Enums\StatusEnum;
+use Modules\Core\Http\Resources\MapResource;
+use Modules\Core\Models\Business;
 
 class MapService
 {

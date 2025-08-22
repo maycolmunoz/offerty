@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\MoonLeaflet\Tests;
+namespace Muxoz\MoonLeaflet\Tests;
 
 class MoonLeafletServiceProviderTest extends TestCase
 {

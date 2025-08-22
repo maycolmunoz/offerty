@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Services;
+namespace Modules\Moonlaunch\Services;
 
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
 

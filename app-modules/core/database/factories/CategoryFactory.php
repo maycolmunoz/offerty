@@ -1,9 +1,9 @@
 <?php
 
-namespace Estivenm0\Core\Database\Factories;
+namespace Modules\Core\Database\Factories;
 
-use Estivenm0\Core\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Core\Models\Category;
 
 class CategoryFactory extends Factory
 {

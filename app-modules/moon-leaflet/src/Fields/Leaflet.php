@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\MoonLeaflet\MoonShine\Fields;
+namespace Muxoz\MoonLeaflet\Fields;
 
-use Estivenm0\MoonLeaflet\Traits\HasConfig;
-use Estivenm0\MoonLeaflet\Traits\HasLeaflet;
 use MoonShine\UI\Fields\Field;
+use Muxoz\MoonLeaflet\Traits\HasConfig;
+use Muxoz\MoonLeaflet\Traits\HasLeaflet;
 
 class Leaflet extends Field
 {

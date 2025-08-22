@@ -1,11 +1,11 @@
 <?php
 
-namespace Estivenm0\Core\Database\Seeders;
+namespace Modules\Core\Database\Seeders;
 
-use Estivenm0\Moonlaunch\Models\Role;
-use Estivenm0\Moonlaunch\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Modules\Moonlaunch\Models\Role;
+use Modules\Moonlaunch\Models\User;
 
 class UserRoleSeeder extends Seeder
 {

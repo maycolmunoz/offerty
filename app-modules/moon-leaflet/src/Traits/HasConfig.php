@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\MoonLeaflet\Traits;
+namespace Muxoz\MoonLeaflet\Traits;
 
 use InvalidArgumentException;
 

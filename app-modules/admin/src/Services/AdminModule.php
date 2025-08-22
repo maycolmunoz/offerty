@@ -1,15 +1,15 @@
 <?php
 
-namespace Estivenm0\Admin\Services;
+namespace Modules\Admin\Services;
 
-use Estivenm0\Admin\MoonShine\Own\OwnBusinessResource;
-use Estivenm0\Admin\MoonShine\Own\OwnPromotionResource;
-use Estivenm0\Admin\MoonShine\Own\OwnRatingResource;
-use Estivenm0\Admin\MoonShine\Resources\CategoryResource;
-use Estivenm0\Admin\MoonShine\Resources\TypeResource;
-use Estivenm0\Admin\MoonShine\Super\SuperBusinessResource;
-use Estivenm0\Admin\MoonShine\Super\SuperPromotionResource;
-use Estivenm0\Admin\MoonShine\Super\SuperRatingResource;
+use Modules\Admin\MoonShine\Own\OwnBusinessResource;
+use Modules\Admin\MoonShine\Own\OwnPromotionResource;
+use Modules\Admin\MoonShine\Own\OwnRatingResource;
+use Modules\Admin\MoonShine\Resources\CategoryResource;
+use Modules\Admin\MoonShine\Resources\TypeResource;
+use Modules\Admin\MoonShine\Super\SuperBusinessResource;
+use Modules\Admin\MoonShine\Super\SuperPromotionResource;
+use Modules\Admin\MoonShine\Super\SuperRatingResource;
 use MoonShine\MenuManager\MenuGroup;
 use MoonShine\MenuManager\MenuItem;
 use Sweet1s\MoonshineRBAC\Components\MenuRBAC;

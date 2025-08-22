@@ -1,11 +1,11 @@
 <?php
 
-namespace Estivenm0\Core\Database\Factories;
+namespace Modules\Core\Database\Factories;
 
-use Estivenm0\Core\Enums\StatusEnum;
-use Estivenm0\Core\Models\Business;
-use Estivenm0\Moonlaunch\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Core\Enums\StatusEnum;
+use Modules\Core\Models\Business;
+use Modules\Moonlaunch\Models\User;
 
 class BusinessFactory extends Factory
 {

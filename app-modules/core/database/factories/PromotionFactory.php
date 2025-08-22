@@ -1,11 +1,11 @@
 <?php
 
-namespace Estivenm0\Core\Database\Factories;
+namespace Modules\Core\Database\Factories;
 
-use Estivenm0\Core\Models\Business;
-use Estivenm0\Core\Models\Category;
-use Estivenm0\Core\Models\Promotion;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Core\Models\Business;
+use Modules\Core\Models\Category;
+use Modules\Core\Models\Promotion;
 
 class PromotionFactory extends Factory
 {

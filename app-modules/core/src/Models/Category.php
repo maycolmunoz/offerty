@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Core\Models;
+namespace Modules\Core\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

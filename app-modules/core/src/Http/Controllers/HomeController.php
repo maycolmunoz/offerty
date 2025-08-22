@@ -1,10 +1,10 @@
 <?php
 
-namespace Estivenm0\Core\Http\Controllers;
+namespace Modules\Core\Http\Controllers;
 
-use Estivenm0\Core\Services\MapService;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Modules\Core\Services\MapService;
 
 class HomeController
 {

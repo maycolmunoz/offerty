@@ -1,11 +1,11 @@
 <?php
 
-namespace Estivenm0\Core\Models;
+namespace Modules\Core\Models;
 
-use Estivenm0\Moonlaunch\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Modules\Moonlaunch\Models\User;
 
 class Rating extends Model
 {

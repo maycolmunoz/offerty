@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Core\Http\Resources;
+namespace Modules\Core\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;

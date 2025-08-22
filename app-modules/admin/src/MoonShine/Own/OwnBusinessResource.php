@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\Admin\MoonShine\Own;
+namespace Modules\Admin\MoonShine\Own;
 
-use Estivenm0\Core\Enums\StatusEnum;
-use Estivenm0\Core\Models\Business;
-use Estivenm0\Moonlaunch\Traits\Properties;
-use Estivenm0\MoonLeaflet\MoonShine\Fields\Leaflet;
 use Illuminate\Contracts\Database\Eloquent\Builder;
+use Modules\Core\Enums\StatusEnum;
+use Modules\Core\Models\Business;
+use Modules\Moonlaunch\Traits\Properties;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\Enums\Action;
 use MoonShine\Laravel\Fields\Relationships\BelongsToMany;
@@ -29,6 +28,7 @@ use MoonShine\UI\Fields\Number;
 use MoonShine\UI\Fields\Phone;
 use MoonShine\UI\Fields\Text;
 use MoonShine\UI\Fields\Textarea;
+use Muxoz\MoonLeaflet\Fields\Leaflet;
 use Sweet1s\MoonshineRBAC\Traits\WithRolePermissions;
 
 #[Icon('s.building-storefront')]

@@ -1,11 +1,11 @@
 <?php
 
-namespace Estivenm0\Core\Database\Factories;
+namespace Modules\Core\Database\Factories;
 
-use Estivenm0\Core\Models\Business;
-use Estivenm0\Core\Models\Rating;
-use Estivenm0\Moonlaunch\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Core\Models\Business;
+use Modules\Core\Models\Rating;
+use Modules\Moonlaunch\Models\User;
 
 class RatingFactory extends Factory
 {
