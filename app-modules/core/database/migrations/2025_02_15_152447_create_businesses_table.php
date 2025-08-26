@@ -1,9 +1,9 @@
 <?php
 
-use Estivenm0\Core\Enums\StatusEnum;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Modules\Core\Enums\StatusEnum;
 
 return new class extends Migration
 {

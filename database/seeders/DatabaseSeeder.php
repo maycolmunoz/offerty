@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Estivenm0\Core\Database\Seeders\DatabaseSeeder as CoreSeeder;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Modules\Core\Database\Seeders\DatabaseSeeder as CoreSeeder;
 
 class DatabaseSeeder extends Seeder
 {

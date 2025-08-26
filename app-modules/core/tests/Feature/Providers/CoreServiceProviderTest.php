@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Core\Tests;
+namespace Modules\Core\Tests;
 
 class CoreServiceProviderTest extends TestCase
 {

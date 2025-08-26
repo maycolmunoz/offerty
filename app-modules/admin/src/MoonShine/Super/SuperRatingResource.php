@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\Admin\MoonShine\Super;
+namespace Modules\Admin\MoonShine\Super;
 
-use Estivenm0\Core\Models\Rating;
+use Modules\Core\Models\Rating;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\Enums\Action;
 use MoonShine\Laravel\Resources\ModelResource;

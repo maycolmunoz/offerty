@@ -1,10 +1,10 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Providers;
+namespace Modules\Moonlaunch\Providers;
 
-use Estivenm0\Moonlaunch\Services\Launch;
-use Estivenm0\Moonlaunch\Services\ThemeApplier;
 use Illuminate\Support\ServiceProvider;
+use Modules\Moonlaunch\Services\Launch;
+use Modules\Moonlaunch\Services\ThemeApplier;
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
 use MoonShine\Contracts\Core\DependencyInjection\CoreContract;
 

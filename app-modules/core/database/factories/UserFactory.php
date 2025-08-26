@@ -1,11 +1,11 @@
 <?php
 
-namespace Estivenm0\Core\Database\Factories;
+namespace Modules\Core\Database\Factories;
 
-use Estivenm0\Moonlaunch\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Modules\Moonlaunch\Models\User;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>

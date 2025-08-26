@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Core\Providers;
+namespace Modules\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
