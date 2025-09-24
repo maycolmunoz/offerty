@@ -2,6 +2,8 @@
 
 A **modern web application to publish offers and visualize them on an interactive map.** Built with a modular architecture and powerful Laravel ecosystem tools.
 
+![home](./_docs/screenshot.webp)
+
 ---
 
 ## 📦 **Core Technologies**
