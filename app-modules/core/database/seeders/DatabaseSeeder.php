@@ -1,13 +1,13 @@
 <?php
 
-namespace Estivenm0\Core\Database\Seeders;
+namespace Modules\Core\Database\Seeders;
 
-use Estivenm0\Core\Models\Business;
-use Estivenm0\Core\Models\Category;
-use Estivenm0\Core\Models\Promotion;
-use Estivenm0\Core\Models\Rating;
-use Estivenm0\Core\Models\Type;
 use Illuminate\Database\Seeder;
+use Modules\Core\Models\Business;
+use Modules\Core\Models\Category;
+use Modules\Core\Models\Promotion;
+use Modules\Core\Models\Rating;
+use Modules\Core\Models\Type;
 
 class DatabaseSeeder extends Seeder
 {

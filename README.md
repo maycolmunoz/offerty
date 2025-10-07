@@ -2,6 +2,8 @@
 
 A **modern web application to publish offers and visualize them on an interactive map.** Built with a modular architecture and powerful Laravel ecosystem tools.
 
+![home](./_docs/screenshot.webp)
+
 ---
 
 ## 📦 **Core Technologies**
@@ -21,7 +23,7 @@ A **modern web application to publish offers and visualize them on an interactiv
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/estivenm0/offerty.git
+git clone https://github.com/maycolmunoz/offerty.git
 cd offerty
 ```
 

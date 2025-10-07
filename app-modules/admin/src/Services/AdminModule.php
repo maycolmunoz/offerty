@@ -1,16 +1,13 @@
 <?php
 
-namespace Estivenm0\Admin\Services;
+namespace Modules\Admin\Services;
 
-use Estivenm0\Admin\MoonShine\Own\OwnBusinessResource;
-use Estivenm0\Admin\MoonShine\Own\OwnPromotionResource;
-use Estivenm0\Admin\MoonShine\Own\OwnRatingResource;
-use Estivenm0\Admin\MoonShine\Resources\CategoryResource;
-use Estivenm0\Admin\MoonShine\Resources\TypeResource;
-use Estivenm0\Admin\MoonShine\Super\SuperBusinessResource;
-use Estivenm0\Admin\MoonShine\Super\SuperPromotionResource;
-use Estivenm0\Admin\MoonShine\Super\SuperRatingResource;
-use Estivenm0\Moonlaunch\Models\User;
+use Modules\Admin\MoonShine\Own\OwnBusinessResource;
+use Modules\Admin\MoonShine\Own\OwnPromotionResource;
+use Modules\Admin\MoonShine\Resources\CategoryResource;
+use Modules\Admin\MoonShine\Resources\TypeResource;
+use Modules\Admin\MoonShine\Super\SuperBusinessResource;
+use Modules\Admin\MoonShine\Super\SuperPromotionResource;
 use MoonShine\MenuManager\MenuGroup;
 use MoonShine\MenuManager\MenuItem;
 use Sweet1s\MoonshineRBAC\Components\MenuRBAC;
@@ -25,11 +22,9 @@ class AdminModule
 
             SuperBusinessResource::class,
             SuperPromotionResource::class,
-            SuperRatingResource::class,
 
             OwnBusinessResource::class,
             OwnPromotionResource::class,
-            OwnRatingResource::class,
         ];
     }
 
@@ -42,13 +37,12 @@ class AdminModule
                     MenuItem::make('Types', TypeResource::class),
                 ], 's.rectangle-stack'),
 
-                MenuGroup::make('Businesses Control', [
+                MenuGroup::make('Control', [
                     MenuItem::make('Businesses', SuperBusinessResource::class),
-                ], 's.viewfinder-circle')
-            ),
+                ], 's.viewfinder-circle'),
 
-            MenuItem::make('My Businesses', OwnBusinessResource::class)
-                ->canSee(fn () => moonshineRequest()->user()->hasRole(User::ROLE_USER)),
+                MenuItem::make('My Businesses', OwnBusinessResource::class)
+            ),
         ];
     }
 }

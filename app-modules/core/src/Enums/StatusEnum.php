@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Core\Enums;
+namespace Modules\Core\Enums;
 
 enum StatusEnum: string
 {

@@ -1,8 +1,7 @@
 <?php
 
-namespace Estivenm0\Core\Models;
+namespace Modules\Core\Models;
 
-use Estivenm0\Moonlaunch\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -10,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Malhal\Geographical\Geographical;
+use Modules\Moonlaunch\Models\User;
 
 class Business extends Model
 {
@@ -61,11 +61,6 @@ class Business extends Model
     public function promotion(): HasOne
     {
         return $this->hasOne(Promotion::class);
-    }
-
-    public function ratings(): HasMany
-    {
-        return $this->hasMany(Rating::class);
     }
 
     public function types(): BelongsToMany

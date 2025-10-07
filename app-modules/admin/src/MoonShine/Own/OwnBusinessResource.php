@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\Admin\MoonShine\Own;
+namespace Modules\Admin\MoonShine\Own;
 
-use Estivenm0\Core\Enums\StatusEnum;
-use Estivenm0\Core\Models\Business;
-use Estivenm0\Moonlaunch\Traits\Properties;
-use Estivenm0\MoonLeaflet\MoonShine\Fields\Leaflet;
 use Illuminate\Contracts\Database\Eloquent\Builder;
+use MaycolMunoz\MoonLeaflet\Fields\LeafletField;
+use Modules\Core\Enums\StatusEnum;
+use Modules\Core\Models\Business;
+use Modules\Moonlaunch\Traits\Properties;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\Enums\Action;
 use MoonShine\Laravel\Fields\Relationships\BelongsToMany;
@@ -61,8 +61,7 @@ class OwnBusinessResource extends ModelResource
 
     protected function modifyQueryBuilder(Builder $builder): Builder
     {
-        return $builder->where('user_id', auth()->user()->id)
-            ->withCount(['promotions', 'ratings']);
+        return $builder->where('user_id', auth()->id())->withCount('promotions');
     }
 
     public function search(): array
@@ -97,10 +96,6 @@ class OwnBusinessResource extends ModelResource
 
             Number::make('Promotions', 'promotions_count')
                 ->badge(),
-
-            Number::make('Ratings', 'ratings_count')
-                ->badge(),
-
         ];
     }
 
@@ -138,7 +133,7 @@ class OwnBusinessResource extends ModelResource
                         Text::make('Address')
                             ->required(),
 
-                        Leaflet::make('Location')->columns('latitude', 'longitude')
+                        LeafletField::make('Location')->columns('latitude', 'longitude')
                             ->initialPosition(40.7580, -73.9855)
                             ->minZoom(5)
                             ->maxZoom(18)
@@ -161,7 +156,7 @@ class OwnBusinessResource extends ModelResource
 
             Text::make('Status Description', 'status_description'),
 
-            Leaflet::make('location'),
+            LeafletField::make('location'),
 
             Text::make('description'),
 
@@ -175,11 +170,6 @@ class OwnBusinessResource extends ModelResource
                 ->canSee(fn () => $this->item?->status === StatusEnum::APPROVED->value)
                 ->searchable(false)
                 ->creatable()
-                ->tabMode(),
-
-            HasMany::make('Ratings', resource: OwnRatingResource::class)
-                ->canSee(fn () => $this->item?->status === StatusEnum::APPROVED->value)
-                ->searchable(false)
                 ->tabMode(),
         ];
     }

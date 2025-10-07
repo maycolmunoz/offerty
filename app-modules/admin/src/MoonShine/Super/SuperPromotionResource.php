@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\Admin\MoonShine\Super;
+namespace Modules\Admin\MoonShine\Super;
 
-use Estivenm0\Core\Models\Promotion;
-use Estivenm0\Moonlaunch\Traits\Properties;
+use Modules\Core\Models\Promotion;
+use Modules\Moonlaunch\Traits\Properties;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 use MoonShine\Laravel\Resources\ModelResource;

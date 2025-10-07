@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Estivenm0\Admin\MoonShine\Super;
+namespace Modules\Admin\MoonShine\Super;
 
-use Estivenm0\Admin\MoonShine\Resources\TypeResource;
-use Estivenm0\Core\Enums\StatusEnum;
-use Estivenm0\Core\Models\Business;
-use Estivenm0\Moonlaunch\Traits\Properties;
-use Estivenm0\MoonLeaflet\MoonShine\Fields\Leaflet;
 use Illuminate\Validation\Rule;
+use MaycolMunoz\MoonLeaflet\Fields\LeafletField;
+use Modules\Admin\MoonShine\Resources\TypeResource;
+use Modules\Core\Enums\StatusEnum;
+use Modules\Core\Models\Business;
+use Modules\Moonlaunch\Traits\Properties;
 use MoonShine\Contracts\UI\ActionButtonContract;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\Enums\Action;
@@ -71,7 +71,7 @@ class SuperBusinessResource extends ModelResource
                     badge: fn ($model, $value) => Badge::make((string) $value, 'primary'),
                 ),
 
-            Leaflet::make('Location'),
+            LeafletField::make('Location'),
         ];
     }
 
@@ -118,11 +118,6 @@ class SuperBusinessResource extends ModelResource
                 ->activeActions(Action::VIEW)
                 ->searchable(false)
                 ->tabMode(),
-
-            HasMany::make('Ratings', resource: SuperRatingResource::class)
-                ->searchable(false)
-                ->tabMode(),
-
         ];
     }
 

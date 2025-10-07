@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Layouts;
 
-use Estivenm0\Moonlaunch\Services\Launch;
+use Modules\Moonlaunch\Services\Launch;
 use MoonShine\ColorManager\ColorManager;
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
 use MoonShine\Laravel\Layouts\AppLayout;

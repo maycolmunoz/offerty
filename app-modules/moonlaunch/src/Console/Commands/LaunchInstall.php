@@ -1,6 +1,6 @@
 <?php
 
-namespace Estivenm0\Moonlaunch\Console\Commands;
+namespace Modules\Moonlaunch\Console\Commands;
 
 use Illuminate\Console\Command;
 
