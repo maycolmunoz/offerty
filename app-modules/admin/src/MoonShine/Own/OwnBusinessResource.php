@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Admin\MoonShine\Own;
 
 use Illuminate\Contracts\Database\Eloquent\Builder;
-use MaycolMunoz\MoonLeaflet\Fields\Leaflet;
+use MaycolMunoz\MoonLeaflet\Fields\LeafletField;
 use Modules\Core\Enums\StatusEnum;
 use Modules\Core\Models\Business;
 use Modules\Moonlaunch\Traits\Properties;
@@ -138,7 +138,7 @@ class OwnBusinessResource extends ModelResource
                         Text::make('Address')
                             ->required(),
 
-                        Leaflet::make('Location')->columns('latitude', 'longitude')
+                        LeafletField::make('Location')->columns('latitude', 'longitude')
                             ->initialPosition(40.7580, -73.9855)
                             ->minZoom(5)
                             ->maxZoom(18)
@@ -161,7 +161,7 @@ class OwnBusinessResource extends ModelResource
 
             Text::make('Status Description', 'status_description'),
 
-            Leaflet::make('location'),
+            LeafletField::make('location'),
 
             Text::make('description'),
 

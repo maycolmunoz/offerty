@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "offerty",
+    "name": "maycolmunoz/offerty",
     "type": "project",
     "description": "web application to publish offers and visualize them on an interactive map.",
     "keywords": [
@@ -16,7 +16,7 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "malhal/laravel-geographical": "^1.0",
-        "maycolmunoz/moon-leaflet": "^1.0",
+        "maycolmunoz/moon-leaflet": "^2.0",
         "modules/admin": "*",
         "modules/core": "*",
         "modules/moonlaunch": "*",

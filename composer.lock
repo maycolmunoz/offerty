@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a2a108ff85151abe5b500ff95ca1345",
+    "content-hash": "1d6ba3941b7423d1a56f263f3792f1f8",
     "packages": [
         {
             "name": "brick/math",
@@ -3081,11 +3081,17 @@
         },
         {
             "name": "maycolmunoz/moon-leaflet",
-            "version": "1.0",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maycolmunoz/moon-leaflet.git",
+                "reference": "894f1da8e19289d155dbd37198265e9dbf412aef"
+            },
             "dist": {
-                "type": "path",
-                "url": "app-modules/moon-leaflet",
-                "reference": "d9f331899e6d20da3c4bec3f0ec445ddd7d84755"
+                "type": "zip",
+                "url": "https://api.github.com/repos/maycolmunoz/moon-leaflet/zipball/894f1da8e19289d155dbd37198265e9dbf412aef",
+                "reference": "894f1da8e19289d155dbd37198265e9dbf412aef",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.2|^8.3"
@@ -3105,10 +3111,11 @@
                 "psr-4": {
                     "MaycolMunoz\\MoonLeaflet\\": "src/",
                     "MaycolMunoz\\MoonLeaflet\\Tests\\": "tests/",
-                    "MaycolMunoz\\MoonLeaflet\\Database\\Factories\\": "database/factories/",
-                    "MaycolMunoz\\MoonLeaflet\\Database\\Seeders\\": "database/seeders/"
+                    "MaycolMunoz\\MoonLeaflet\\Database\\Seeders\\": "database/seeders/",
+                    "MaycolMunoz\\MoonLeaflet\\Database\\Factories\\": "database/factories/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3128,10 +3135,7 @@
                 "issues": "https://github.com/modules/moon-leaflet/issues",
                 "source": "https://github.com/modules/moon-leaflet"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2025-10-06T23:52:26+00:00"
         },
         {
             "name": "modules/admin",

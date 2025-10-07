@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Admin\MoonShine\Super;
 
 use Illuminate\Validation\Rule;
-use MaycolMunoz\MoonLeaflet\Fields\Leaflet;
+use MaycolMunoz\MoonLeaflet\Fields\LeafletField;
 use Modules\Admin\MoonShine\Resources\TypeResource;
 use Modules\Core\Enums\StatusEnum;
 use Modules\Core\Models\Business;
@@ -71,7 +71,7 @@ class SuperBusinessResource extends ModelResource
                     badge: fn ($model, $value) => Badge::make((string) $value, 'primary'),
                 ),
 
-            Leaflet::make('Location'),
+            LeafletField::make('Location'),
         ];
     }
 
