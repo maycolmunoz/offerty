@@ -4,12 +4,10 @@ namespace Modules\Admin\Services;
 
 use Modules\Admin\MoonShine\Own\OwnBusinessResource;
 use Modules\Admin\MoonShine\Own\OwnPromotionResource;
-use Modules\Admin\MoonShine\Own\OwnRatingResource;
 use Modules\Admin\MoonShine\Resources\CategoryResource;
 use Modules\Admin\MoonShine\Resources\TypeResource;
 use Modules\Admin\MoonShine\Super\SuperBusinessResource;
 use Modules\Admin\MoonShine\Super\SuperPromotionResource;
-use Modules\Admin\MoonShine\Super\SuperRatingResource;
 use MoonShine\MenuManager\MenuGroup;
 use MoonShine\MenuManager\MenuItem;
 use Sweet1s\MoonshineRBAC\Components\MenuRBAC;
@@ -24,11 +22,9 @@ class AdminModule
 
             SuperBusinessResource::class,
             SuperPromotionResource::class,
-            SuperRatingResource::class,
 
             OwnBusinessResource::class,
             OwnPromotionResource::class,
-            OwnRatingResource::class,
         ];
     }
 
@@ -41,7 +37,7 @@ class AdminModule
                     MenuItem::make('Types', TypeResource::class),
                 ], 's.rectangle-stack'),
 
-                MenuGroup::make('Businesses Control', [
+                MenuGroup::make('Control', [
                     MenuItem::make('Businesses', SuperBusinessResource::class),
                 ], 's.viewfinder-circle'),
 

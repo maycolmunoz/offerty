@@ -63,11 +63,6 @@ class Business extends Model
         return $this->hasOne(Promotion::class);
     }
 
-    public function ratings(): HasMany
-    {
-        return $this->hasMany(Rating::class);
-    }
-
     public function types(): BelongsToMany
     {
         return $this->belongsToMany(Type::class, 'business_types');

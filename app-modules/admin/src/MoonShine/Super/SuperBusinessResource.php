@@ -118,11 +118,6 @@ class SuperBusinessResource extends ModelResource
                 ->activeActions(Action::VIEW)
                 ->searchable(false)
                 ->tabMode(),
-
-            HasMany::make('Ratings', resource: SuperRatingResource::class)
-                ->searchable(false)
-                ->tabMode(),
-
         ];
     }
 

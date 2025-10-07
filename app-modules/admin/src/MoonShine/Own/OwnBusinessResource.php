@@ -61,8 +61,7 @@ class OwnBusinessResource extends ModelResource
 
     protected function modifyQueryBuilder(Builder $builder): Builder
     {
-        return $builder->where('user_id', auth()->user()->id)
-            ->withCount(['promotions', 'ratings']);
+        return $builder->where('user_id', auth()->id())->withCount('promotions');
     }
 
     public function search(): array
@@ -97,10 +96,6 @@ class OwnBusinessResource extends ModelResource
 
             Number::make('Promotions', 'promotions_count')
                 ->badge(),
-
-            Number::make('Ratings', 'ratings_count')
-                ->badge(),
-
         ];
     }
 
@@ -175,11 +170,6 @@ class OwnBusinessResource extends ModelResource
                 ->canSee(fn () => $this->item?->status === StatusEnum::APPROVED->value)
                 ->searchable(false)
                 ->creatable()
-                ->tabMode(),
-
-            HasMany::make('Ratings', resource: OwnRatingResource::class)
-                ->canSee(fn () => $this->item?->status === StatusEnum::APPROVED->value)
-                ->searchable(false)
                 ->tabMode(),
         ];
     }
