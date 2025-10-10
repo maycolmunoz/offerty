@@ -19,9 +19,6 @@ class MoonShineServiceProvider extends ServiceProvider
     public function boot(CoreContract $core, ConfiguratorContract $config): void
     {
         $core
-            ->resources([
-
-            ])
             ->pages([
                 ...$config->getPages(),
             ]);
