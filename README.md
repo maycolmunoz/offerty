@@ -2,7 +2,6 @@
 
 A **modern web application to publish offers and visualize them on an interactive map.** Built with a modular architecture and powerful Laravel ecosystem tools.
 
-|      |            |       |
 |:----:|:----------:|:-----:|
 | ![home](./_docs/home.webp) | ![dashboard](./_docs/dashboard.webp) | ![panel](./_docs/panel.webp) |
 
